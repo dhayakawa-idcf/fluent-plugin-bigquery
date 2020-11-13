@@ -4,10 +4,9 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fluent/plugin/bigquery/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "fluent-plugin-bigquery"
+  spec.name          = "fluent-plugin-bigquery-test"
   spec.version       = Fluent::BigQueryPlugin::VERSION
-  spec.authors       = ["Naoya Ito", "joker1007"]
-  spec.email         = ["i.naoya@gmail.com", "kakyoin.hierophant@gmail.com"]
+  spec.authors       = ["dhayakawa"]
   spec.description   = %q{Fluentd plugin to store data on Google BigQuery, by load, or by stream inserts}
   spec.summary       = %q{Fluentd plugin to store data on Google BigQuery}
   spec.homepage      = "https://github.com/kaizenplatform/fluent-plugin-bigquery"
@@ -23,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "test-unit"
   spec.add_development_dependency "test-unit-rr"
 
-  spec.add_runtime_dependency "google-api-client", ">= 0.11.0"
+  spec.add_runtime_dependency "google-api-client", ">= 0.49.0"
   spec.add_runtime_dependency "googleauth", ">= 0.5.0"
   spec.add_runtime_dependency "multi_json"
   spec.add_runtime_dependency "fluentd", ">= 0.14.0", "< 2"
